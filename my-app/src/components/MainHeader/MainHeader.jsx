@@ -1,11 +1,11 @@
 import "./MainHeader.css"
-import Navigation from "./Navigation.js"
+import Navigation from "./Navigation.jsx"
 
-const MainHeader = () => {
+const MainHeader = (props) => {
     return (
         <header className="main-header">
             <h1>A Typical page</h1>
-            <Navigation />
+            <Navigation loggedIn = {props.isAuthenticated} />
         </header>
     )
 }
