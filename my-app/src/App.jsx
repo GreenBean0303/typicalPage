@@ -35,17 +35,16 @@ function App() {
         localStorage.removeItem('isLoggedUser');
         setLoggedIn(false);
     };
-    
-    return (
-        <Fragment>
-            <MainHeader />
-            <main>
-            {!loggedIn && <Login onLogin={loginHandler} />}
-            {loggedIn && <Home />}
 
-            </main>
-        </Fragment>
-    );
+   return (
+    <Fragment>
+      <MainHeader isAuthenticated={loggedIn} onLogout={logoutHandler} />
+      <main>
+        {!loggedIn && <Login onLogin={loginHandler} />}
+        {loggedIn && <Home />}
+      </main>
+    </Fragment>
+  );
 }
 
 export default App;
