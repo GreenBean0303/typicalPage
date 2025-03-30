@@ -36,3 +36,30 @@
     transform: rotate(360deg);
   }
 }
+/* App.css or index.css */
+.light {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+.dark {
+  background-color: #121212;
+  color: #ffffff;
+}
+.light .card {
+  background-color: white;
+  color: black;
+}
+
+.dark .card {
+  background-color: #1e1e1e;
+  color: white;
+}
+
+.light .main-header {
+  background-color: rgb(26, 125, 155);
+}
+
+.dark .main-header {
+  background-color: #333;
+}
