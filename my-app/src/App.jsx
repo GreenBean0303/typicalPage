@@ -23,9 +23,7 @@ function App() {
 
     // Login handler to store login state
     const loginHandler = (user, password) => {
-        localStorage.setItem(
-            'isLoggedUser',
-            JSON.stringify({
+        localStorage.setItem('isLoggedUser',JSON.stringify({
                 username: user,
                 isLogged: true,
             })
@@ -33,6 +31,11 @@ function App() {
         setLoggedIn(true);
     };
 
+    const logoutHandler = () => {
+        localStorage.removeItem('isLoggedUser');
+        setLoggedIn(false);
+    };
+    
     return (
         <Fragment>
             <MainHeader />
